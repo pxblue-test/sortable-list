@@ -1,18 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-
 
 // Material Components
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import DragIndicator from '@material-ui/icons/DragIndicator';
-import Icon from '@material-ui/core/Icon';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-// import Switch from '@material-ui/core/Switch';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
@@ -27,7 +21,6 @@ import {SortableContainer,
 
 // Additional Styles
 import './style.css';
-const ITEM_HEIGHT = 48;
 
 
 // Utility Functions
