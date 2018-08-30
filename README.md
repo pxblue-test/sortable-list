@@ -3,3 +3,7 @@
 [![CircleCI](https://circleci.com/gh/pxblue/sortable-list/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/sortable-list/tree/react)
 
 This is an example application that allows you to sort items in a list (when edit mode is active). It makes use of the [react-sortable-hoc](https://github.com/clauderic/react-sortable-hoc) library for the sorting logic.
+
+[Edit this project on StackBlitz](https://stackblitz.com/edit/pxblue-list-actions-react)
+
+This project was bootstrapped with [Create React App](https://stackblitz.com/edit/pxblue-sortable-list-react).
