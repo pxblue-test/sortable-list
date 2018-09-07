@@ -41,12 +41,12 @@ function ObjectToList(obj){
 
 
 // Sortable Components Definitions
-const DragHandle = SortableHandle(() => <DragIndicator style={{height: '20px', width: '20px'}}/>);
+const DragHandle = SortableHandle(() => <DragIndicator style={{height: '20px', width: '20px', cursor: 'pointer'}}/>);
 
 const SortableListItem = SortableElement(({value}) => {
   return (
-    <ListItem style={{cursor: 'pointer'}}>
-      <DragHandle style={{fontSize: 2}} fontSize={'inherit'}/>
+    <ListItem>
+      <DragHandle fontSize={'inherit'}/>
       <ListItemText primary={unCamelCase(value.key)} 
         style={{paddingLeft: '5px'}}>
       </ListItemText>
@@ -83,7 +83,7 @@ class SortableListExample extends React.Component {
       'johnAdams': 1796,
       'thomasJefferson': 1800,
       'jamesMadison': 1808,
-      'jamesMonroe': 1812,
+      'jamesMonroe': 1812
     };
 
     this.state = {
@@ -112,7 +112,12 @@ class SortableListExample extends React.Component {
           </Toolbar>
         </AppBar>
         {this.state.sortable && 
-          <SortableList items={this.state.list} onSortEnd={this.onSortEnd}/>
+          <SortableList 
+            items={this.state.list} 
+            onSortEnd={this.onSortEnd}
+            useDragHandle={true}
+            pressDelay={200}
+          />
         }
         {!this.state.sortable &&
           <List className="list" component="nav">
