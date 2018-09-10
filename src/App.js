@@ -116,7 +116,6 @@ class SortableListExample extends React.Component {
             items={this.state.list} 
             onSortEnd={this.onSortEnd}
             useDragHandle={true}
-            pressDelay={200}
           />
         }
         {!this.state.sortable &&
