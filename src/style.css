@@ -1,24 +1,7 @@
-
 body{
   margin: 0;
 }
-.list{
-  padding-top: 0px; 
-}
-.list .side{
-  flex: inherit;
-  padding: 0;
-}
-.side{
+.lastColumn {
   text-align: right;
-  padding-right: 0;
-}
-.div{
-  flex: 1 1 0px;
-  text-align: right;
-  margin-right: -14px;
-}
-.itemtext{
-  text-align: right;
-  padding-right: 0;
+  padding-right: 0px;
 }
