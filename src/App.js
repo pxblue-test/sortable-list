@@ -50,7 +50,7 @@ const SortableListItem = SortableElement(({value}) => {
       <ListItemText primary={unCamelCase(value.key)} 
         style={{paddingLeft: '5px'}}>
       </ListItemText>
-      <ListItemText className={"side"} secondary={value.value} >
+      <ListItemText className="lastColumn" secondary={value.value} >
       </ListItemText>
     </ListItem>
   );
@@ -58,7 +58,7 @@ const SortableListItem = SortableElement(({value}) => {
 
 export const SortableList = SortableContainer(({items}) => {
   return (
-    <List className="list" component="nav">
+    <List style={{paddingTop: '0px'}} component="nav">
       {
         items.map((item, i) => {
           return (<SortableListItem key={`item-${i}`} index={i} value={item} />);
@@ -100,7 +100,7 @@ class SortableListExample extends React.Component {
             <Typography variant="title" color="inherit">
               Sortable List
             </Typography>
-            <div className={'div'}>
+            <div style={{flex: '1 1 0px', textAlign: 'right', marginRight: '-14px'}}>
               <Button style={{color: 'white'}} onClick={() => this.setState({sortable: !this.state.sortable})}>
                 {this.state.sortable ? 'Save' : 'Edit'}
               </Button>
@@ -115,13 +115,13 @@ class SortableListExample extends React.Component {
           />
         }
         {!this.state.sortable &&
-          <List className="list" component="nav">
+          <List style={{paddingTop: '0px'}} component="nav">
             {
               this.state.list.map((item, i) => {
                 return (
                   <ListItem key={`item-${i}`}>
                     <ListItemText primary={unCamelCase(item.key)} ></ListItemText>
-                    <ListItemText className={'itemtext'} secondary={item.value}>
+                    <ListItemText className={'lastColumn'} secondary={item.value}>
                     </ListItemText>
                   </ListItem>
                 )
@@ -135,3 +135,4 @@ class SortableListExample extends React.Component {
 }
 
 export default SortableListExample;
+
