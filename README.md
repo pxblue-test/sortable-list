@@ -1,4 +1,4 @@
-# Basic Sortable-list Example
+# Sortable (Drag & Drop) List
 
 [![CircleCI](https://circleci.com/gh/pxblue/sortable-list/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/sortable-list/tree/react)
 
