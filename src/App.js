@@ -121,7 +121,7 @@ class SortableListExample extends React.Component {
                 return (
                   <ListItem key={`item-${i}`}>
                     <ListItemText primary={unCamelCase(item.key)} ></ListItemText>
-                    <ListItemText className={'lastColumn'} secondary={item.value}>
+                    <ListItemText classes={{root:'lastColumn'}} secondary={item.value}>
                     </ListItemText>
                   </ListItem>
                 )
