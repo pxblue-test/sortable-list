@@ -50,7 +50,7 @@ const SortableListItem = SortableElement(({value}) => {
       <ListItemText primary={unCamelCase(value.key)} 
         style={{paddingLeft: '5px'}}>
       </ListItemText>
-      <ListItemText className="lastColumn" secondary={value.value} >
+      <ListItemText style={{textAlign: 'right', paddingRight: '0px'}} secondary={value.value} >
       </ListItemText>
     </ListItem>
   );
@@ -121,7 +121,7 @@ class SortableListExample extends React.Component {
                 return (
                   <ListItem key={`item-${i}`}>
                     <ListItemText primary={unCamelCase(item.key)} ></ListItemText>
-                    <ListItemText classes={{root:'lastColumn'}} secondary={item.value}>
+                    <ListItemText style={{textAlign: 'right',paddingRight: '0px'}} secondary={item.value}>
                     </ListItemText>
                   </ListItem>
                 )
@@ -135,4 +135,3 @@ class SortableListExample extends React.Component {
 }
 
 export default SortableListExample;
-
