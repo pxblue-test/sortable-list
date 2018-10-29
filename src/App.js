@@ -97,7 +97,7 @@ class SortableListExample extends React.Component {
       <div>
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="title" color="inherit">
+            <Typography variant="h6" color="inherit">
               Sortable List
             </Typography>
             <div style={{flex: '1 1 0px', textAlign: 'right', marginRight: '-14px'}}>
