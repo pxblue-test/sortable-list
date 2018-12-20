@@ -1,0 +1,32 @@
+.selected{
+    background-color: #cccccc;
+  }
+  mat-nav-list{
+    padding-top:0px;
+  }
+  table {
+    width: 100%;
+    overflow: auto;
+  }
+  mat-list-item{
+    transition: all cubic-bezier(0.0, 0.0, 0.2, 1) 220ms;
+  }
+  .cdk-drag-preview{
+    transition: all 0ms !important;
+    display: flex !important;
+    -webkit-margin-before: none !important;
+    -webkit-margin-after: none !important;
+    mat-list-item{
+      transition: all 0ms !important;
+      .mat-list-item-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 16px;
+        position: relative;
+        height: inherit;
+        margin-left: 4px;
+      }
+    }
+  }
