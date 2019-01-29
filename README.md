@@ -1,4 +1,5 @@
 # Sortable (Drag & Drop) List
+[![CircleCI](https://circleci.com/gh/pxblue/sortable-list/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/sortable-list/tree/angular)
 
 This is a sample application showing how to build a sortable list by placing a drag handle.
 
