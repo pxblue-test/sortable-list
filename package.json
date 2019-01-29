@@ -10,7 +10,8 @@
     "react": "16.4.2",
     "react-dom": "16.4.2",
     "react-scripts": "1.0.15",
-    "react-sortable-hoc": "0.8.3"
+    "react-sortable-hoc": "0.8.3",
+    "webpack": "^3.11.0"
   },
   "version": "0.1.0",
   "private": true,
