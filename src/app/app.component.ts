@@ -8,7 +8,7 @@ import { moveItemInArray, CdkDragDrop} from '@angular/cdk/drag-drop';
   styleUrls: ['./app.component.scss']
 
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
 
   version = VERSION;
 
@@ -38,18 +38,5 @@ export class AppComponent implements OnInit {
    
   }
 
-  ngOnInit(): void {
-
-  }
-  onOpenMenu(menu: any): void {
-    console.log(menu);
-  }
-  onSelected(item: any) {
-   
-    this.item = item;
-  }
-  isSelected(item: any) {
-    return this.item === item;
-  }
  
 }
