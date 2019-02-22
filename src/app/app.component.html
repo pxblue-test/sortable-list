@@ -2,12 +2,12 @@
 	<div>Sortable list</div>
 	<div fxFlex style="margin:auto;"></div>
 	<button mat-icon-button (click)="edit()">
-    <mat-icon>{{draggable ? "check" : "edit"}}</mat-icon>
+    <mat-icon >{{draggable ? "check" : "edit"}}</mat-icon>
   </button>
 </mat-toolbar>
-<mat-nav-list *ngIf="data.length > 0" [disableRipple]="draggable">
-	<section *ngIf="!draggable">
-		<mat-list-item *ngFor="let i of data" [ngClass]="{'selected': isSelected(i)}" (click)="onSelected(i)">
+<mat-nav-list  *ngIf="data.length > 0" [disableRipple]="draggable" >
+	<section  *ngIf="!draggable">
+		<mat-list-item   *ngFor="let i of data">
 			<div mat-line>
 				{{ i.name }}
 			</div>
@@ -17,7 +17,7 @@
 		</mat-list-item>
 	</section>
 	<div cdkDropList (cdkDropListDropped)="onDrop($event)" *ngIf="draggable">
-		<mat-list-item *ngFor="let i of data" (click)="onSelected(i)" [ngClass]="{'selected': isSelected(i)}" cdkDrag>
+		<mat-list-item *ngFor="let i of data"  cdkDrag>
 			<mat-icon matListIcon cdkDragHandle class="handler">drag_indicator</mat-icon>
 			<div mat-line>
 				{{ i.name }}
