@@ -4,17 +4,13 @@ import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import {
-
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatExpansionModule,
-  MatIconModule,
-  MatListModule,
-  MatSelectModule,
-  MatToolbarModule,
-
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import {AppComponent} from './app.component';
 
 @NgModule({

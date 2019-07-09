@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { VERSION } from '@angular/material';
+import { VERSION } from '@angular/material/core';
 import { moveItemInArray, CdkDragDrop} from '@angular/cdk/drag-drop';
 
 @Component({
