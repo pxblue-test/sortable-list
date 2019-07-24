@@ -8,6 +8,7 @@
     "@pxblue/themes": "^1.0.25",
     "material-icons": "^0.3.0",
     "react": "16.4.2",
+    "react-app-polyfill": "^1.0.1",
     "react-dom": "16.4.2",
     "react-scripts": "^3.0.0",
     "react-sortable-hoc": "0.8.3"
