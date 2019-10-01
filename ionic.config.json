@@ -1,0 +1,7 @@
+{
+  "name": "pxblue-sortable-list-ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
