@@ -3,6 +3,7 @@ import {
   StyleSheet,
   View,
   TouchableOpacity,
+  FlatList,
 } from 'react-native';
 import * as Colors from '@pxblue/colors';
 import { Header, ListItem, Button } from 'react-native-elements';
@@ -36,8 +37,8 @@ export default class App extends React.Component {
     this.state = { data: data, sortable: false };
   }
 
-  renderDragableItem = ({ item, index, move, moveEnd, isActive }) => (
-    <TouchableOpacity onLongPress={move} onPressOut={moveEnd}>
+  renderDragableItem = ({ item, move, moveEnd }) => (
+    <TouchableOpacity onPressIn={move} onPressOut={moveEnd}>
       <ListItem
         title={item.name}
         rightTitle={`${item.value}`}
@@ -63,26 +64,36 @@ export default class App extends React.Component {
           backgroundColor={Colors.blue[500]}
           centerComponent={{
             text: 'Sortable List',
-            style: { color: Colors.white[500], fontSize: 16 },
+            style: { color: Colors.white[50], fontSize: 16 },
           }}
           rightComponent={() => (
             <Button
               title={this.state.sortable ? 'Save' : 'Edit'}
               type="clear"
               onPress={this.toggleEdit}
-              titleStyle={{ color: Colors.white[500] }}
+              titleStyle={{ color: Colors.white[50] }}
             />
           )}
         />
-        <DraggableFlatList
-          data={this.state.data}
-          renderItem={
-            this.state.sortable ? this.renderDragableItem : this.renderItem
-          }
-          keyExtractor={(item, index) => `${index}-${this.state.sortable}`}
-          scrollPercent={50}
-          onMoveEnd={({ data }) => this.setState({ data })}
-        />
+        {
+          this.state.sortable
+            ? (
+              <DraggableFlatList
+                data={this.state.data}
+                renderItem={this.renderDragableItem}
+                keyExtractor={(item, index) => `${index}`}
+                onMoveEnd={({ data }) => this.setState({ data })}
+              />
+            )
+            : (
+              <FlatList
+                data={this.state.data}
+                renderItem={this.renderItem}
+                keyExtractor={(item, index) => `${index}`}
+              />
+            )
+        }
+
       </View>
     );
   }
@@ -91,6 +102,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.white[100],
+    backgroundColor: Colors.white[50],
   },
 });
