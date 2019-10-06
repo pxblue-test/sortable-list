@@ -42,7 +42,8 @@ export default class App extends React.Component {
       <ListItem
         title={item.name}
         rightTitle={`${item.value}`}
-        leftIcon={{ name: 'drag-handle' }}
+        leftIcon={{ name: 'drag-handle', size: 20 }}
+
       />
     </TouchableOpacity>
   );
@@ -103,5 +104,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.white[50],
-  },
+  }
 });
