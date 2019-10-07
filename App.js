@@ -37,14 +37,14 @@ export default class App extends React.Component {
     this.state = { data: data, sortable: false };
   }
 
-  renderDragableItem = ({ item, move, moveEnd }) => (
+  renderDragableItem = ({ item, index, move, moveEnd, isActive }) => (
     <TouchableOpacity onPressIn={move} onPressOut={moveEnd}>
       <ListItem
         title={item.name}
         rightTitle={`${item.value}`}
         contentContainerStyle={{height: 24}}
         leftIcon={{ name: 'drag-handle' }}
-
+        containerStyle={isActive ? styles.dragging : {}}
       />
     </TouchableOpacity>
   );
@@ -105,5 +105,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.white[50],
+  },
+  dragging:{
+    shadowColor: Colors.black['A700'],
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 4
   }
 });
