@@ -12,7 +12,7 @@
     "@pxblue/colors": "^1.0.13",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "expo": "^35.0.0",
+    "expo": "^34.0.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
