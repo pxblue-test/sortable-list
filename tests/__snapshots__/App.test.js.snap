@@ -241,6 +241,7 @@ exports[`App Tests  App Renders 1`] = `
               style={
                 Object {
                   "flex": 1,
+                  "height": 24,
                   "justifyContent": "center",
                 }
               }
@@ -378,6 +379,7 @@ exports[`App Tests  App Renders 1`] = `
               style={
                 Object {
                   "flex": 1,
+                  "height": 24,
                   "justifyContent": "center",
                 }
               }
@@ -515,6 +517,7 @@ exports[`App Tests  App Renders 1`] = `
               style={
                 Object {
                   "flex": 1,
+                  "height": 24,
                   "justifyContent": "center",
                 }
               }
@@ -652,6 +655,7 @@ exports[`App Tests  App Renders 1`] = `
               style={
                 Object {
                   "flex": 1,
+                  "height": 24,
                   "justifyContent": "center",
                 }
               }
@@ -789,6 +793,7 @@ exports[`App Tests  App Renders 1`] = `
               style={
                 Object {
                   "flex": 1,
+                  "height": 24,
                   "justifyContent": "center",
                 }
               }

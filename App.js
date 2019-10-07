@@ -42,14 +42,15 @@ export default class App extends React.Component {
       <ListItem
         title={item.name}
         rightTitle={`${item.value}`}
-        leftIcon={{ name: 'drag-handle', size: 20 }}
+        contentContainerStyle={{height: 24}}
+        leftIcon={{ name: 'drag-handle' }}
 
       />
     </TouchableOpacity>
   );
 
   renderItem = ({ item }) => (
-    <ListItem title={item.name} rightTitle={`${item.value}`} />
+    <ListItem title={item.name} rightTitle={`${item.value}`} contentContainerStyle={{height: 24}} />
   );
 
   toggleEdit = () => {
