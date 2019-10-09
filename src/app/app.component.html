@@ -1,3 +1,44 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header>
+
+    <ion-toolbar flexLayout="row">
+      <ion-title>
+        <div fxLayout="row" fxLayoutAlign="space-between">
+          <div>
+            <span>
+              <div> Sortable list </div>
+            </span>
+          </div>
+          <mat-icon id="edit-list" (click)="edit()">{{draggable ? "check" : "edit"}}</mat-icon>
+        </div>
+      </ion-title>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <mat-nav-list *ngIf="data.length > 0" [disableRipple]="draggable">
+      <section *ngIf="!draggable">
+        <mat-list-item *ngFor="let i of data">
+          <div mat-line>
+            {{ i.name }}
+          </div>
+          <div>
+            {{ i.details }}
+          </div>
+        </mat-list-item>
+      </section>
+      <div cdkDropList (cdkDropListDropped)="onDrop($event)" *ngIf="draggable">
+        <mat-list-item *ngFor="let i of data" cdkDrag cdkDragHandle>
+          <mat-icon matListIcon cdkDragHandle class="handler">drag_handle</mat-icon>
+          <div mat-line>
+            {{ i.name }}
+          </div>
+          <div>
+            {{ i.details }}
+          </div>
+        </mat-list-item>
+      </div>
+    </mat-nav-list>
+  </ion-content>
 </ion-app>

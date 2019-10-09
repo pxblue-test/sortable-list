@@ -42,6 +42,20 @@ describe('AppComponent', () => {
     expect(splashScreenSpy.hide).toHaveBeenCalled();
   });
 
-  // TODO: add more tests!
+  it('Disbale dragging', async () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.draggable = false;
+    document.getElementById('edit-list').click();
+    expect(app.draggable).toBe(false);
+  });
+
+  it('Enable dragging', async () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.draggable = true;
+    document.getElementById('edit-list').click();
+    expect(app.draggable).toBe(true);
+  });
 
 });
