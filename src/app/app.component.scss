@@ -4,6 +4,7 @@
 
 
   mat-list-item{
+    height: 48px;
     transition: all 0ms !important;
     .mat-list-item-content{
       display: flex;
@@ -17,3 +18,4 @@
     }
   }
 }
+

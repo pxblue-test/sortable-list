@@ -46,7 +46,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     app.draggable = false;
-    document.getElementById('edit-list').click();
     expect(app.draggable).toBe(false);
   });
 
@@ -54,7 +53,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     app.draggable = true;
-    document.getElementById('edit-list').click();
     expect(app.draggable).toBe(true);
   });
 

@@ -40,3 +40,16 @@ ion-header, ion-toolbar {
     background: map-get($pxb-blue, 500);
     font-family: Open Sans, sans-serif;    
 }
+
+ion-button{
+  color: map-get($pxb-white, 50);
+  --color : map-get($pxb-white, 50);
+  --background : map-get($pxb-blue, 500);
+  --background-activated :  map-get($pxb-blue, 500);
+  --background-focused : map-get($pxb-blue, 500);
+  --background-hover : map-get($pxb-blue, 500);
+}
+
+.mat-list-base .mat-list-item.mat-list-item-with-avatar, .mat-list-base .mat-list-option.mat-list-item-with-avatar {
+  height: 48px  !important;
+}
