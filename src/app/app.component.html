@@ -1,15 +1,15 @@
 <ion-app>
-
   <ion-header>
-    <ion-toolbar>
-      <ion-title style="text-align: center; padding: 0; font-size: 16px;">
+    <ion-toolbar mode="ios">
+      <ion-title>
         Sortable list
-        <mat-icon style="float: right; margin-right: 15px;" id="edit-list" (click)="edit()">
-          {{draggable ? "check" : "edit"}}</mat-icon>
       </ion-title>
+      <ion-buttons slot="end" class="ion-margin-end">
+        <mat-icon id="edit-list" (click)="edit()">
+          {{draggable ? "check" : "edit"}}</mat-icon>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
-
 
   <ion-content>
     <mat-nav-list *ngIf="data.length > 0" [disableRipple]="draggable">

@@ -56,4 +56,11 @@ describe('AppComponent', () => {
     expect(app.draggable).toBe(true);
   });
 
+  it('Dragging completed', async () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.draggable = true;
+    expect(app.draggable).toBe(true);
+  });
+
 });

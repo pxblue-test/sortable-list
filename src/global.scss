@@ -13,17 +13,17 @@
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-// @import "~@ionic/angular/css/normalize.css";
-// @import "~@ionic/angular/css/structure.css";
-// // @import "~@ionic/angular/css/typography.css";
-// @import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-// @import "~@ionic/angular/css/padding.css";
-// @import "~@ionic/angular/css/float-elements.css";
-// @import "~@ionic/angular/css/text-alignment.css";
-// @import "~@ionic/angular/css/text-transformation.css";
-// @import "~@ionic/angular/css/flex-utils.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
 
 @import '~@pxblue/colors/palette.scss';
 
@@ -48,8 +48,4 @@ ion-button{
   --background-activated :  map-get($pxb-blue, 500);
   --background-focused : map-get($pxb-blue, 500);
   --background-hover : map-get($pxb-blue, 500);
-}
-
-.mat-list-base .mat-list-item.mat-list-item-with-avatar, .mat-list-base .mat-list-option.mat-list-item-with-avatar {
-  height: 48px  !important;
 }
