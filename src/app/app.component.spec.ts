@@ -1,11 +1,11 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component'
+import { moveItemInArray } from '@angular/cdk/drag-drop';
 
 describe('AppComponent', () => {
 
@@ -56,11 +56,13 @@ describe('AppComponent', () => {
     expect(app.draggable).toBe(true);
   });
 
-  it('Dragging completed', async () => {
+  it('reorders the list correctly', async () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    app.draggable = true;
-    expect(app.draggable).toBe(true);
+    const oldList = app.data;
+    moveItemInArray(oldList, 0, oldList.length - 1);
+    const newList = app.data;
+    expect(newList).toEqual(oldList);
   });
 
-});
+})

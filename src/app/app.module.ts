@@ -5,7 +5,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NgModule, } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { FlexLayoutModule } from "@angular/flex-layout";
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import {
@@ -21,7 +20,6 @@ import { AppComponent } from './app.component';
     IonicModule.forRoot(),
     BrowserAnimationsModule,
     HttpClientModule,
-    FlexLayoutModule,
     MatToolbarModule,
     MatListModule,
     MatIconModule,
