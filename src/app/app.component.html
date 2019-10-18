@@ -1,7 +1,7 @@
 <ion-app>
   <ion-header>
     <ion-toolbar>
-      <ion-title class="ion-text-center">
+      <ion-title class="ion-text-center" style="font-size:16px">
         Sortable list
       </ion-title>
       <ion-buttons slot="end" class="ion-margin-end">
@@ -14,25 +14,26 @@
   <ion-content>
     <mat-nav-list *ngIf="data.length > 0" [disableRipple]="draggable">
       <section *ngIf="!draggable">
-        <mat-list-item *ngFor="let i of data">
-          <div mat-line>
+        <mat-list-item *ngFor="let i of data" style="height: 48px">
+          <div mat-line class="mat-h3">
             {{ i.name }}
           </div>
-          <div>
+          <div class="mat-h3">
             {{ i.details }}
           </div>
         </mat-list-item>
       </section>
-      <div cdkDropList (cdkDropListDropped)="onDrop($event)" *ngIf="draggable">
-        <mat-list-item *ngFor="let i of data" cdkDrag cdkDragHandle>
+      <div cdkDropList class="sortable-list" (cdkDropListDropped)="onDrop($event)" *ngIf="draggable">
+        <mat-list-item *ngFor="let i of data" cdkDrag cdkDragHandle class="sortable-box" style=" height: 48px;">
           <mat-icon matListIcon cdkDragHandle class="handler">drag_handle</mat-icon>
-          <div mat-line>
+          <div class="mat-h3" mat-line>
             {{ i.name }}
           </div>
-          <div>
+          <div class="mat-h3">
             {{ i.details }}
           </div>
         </mat-list-item>
+
       </div>
     </mat-nav-list>
   </ion-content>
