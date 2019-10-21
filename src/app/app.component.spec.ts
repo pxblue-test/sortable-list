@@ -41,19 +41,18 @@ describe('AppComponent', () => {
     expect(statusBarSpy.styleDefault).toHaveBeenCalled();
     expect(splashScreenSpy.hide).toHaveBeenCalled();
   });
+  it('Enable dragging', async () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    document.getElementById('edit-list').click();
+    expect(app.draggable).toBe(true);
+  });
 
   it('Disbale dragging', async () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    app.draggable = false;
-    expect(app.draggable).toBe(false);
-  });
-
-  it('Enable dragging', async () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    app.draggable = true;
-    expect(app.draggable).toBe(true);
+    document.getElementById('edit-list').click();
+    expect(!app.draggable).toBe(false);
   });
 
   it('reorders the list correctly', async () => {
