@@ -7,22 +7,23 @@
 </mat-toolbar>
 <mat-nav-list  *ngIf="data.length > 0" [disableRipple]="draggable" >
 	<section  *ngIf="!draggable">
-		<mat-list-item   *ngFor="let i of data">
+		<mat-list-item *ngFor="let i of data">
+			<mat-icon style="display: none;" matListIcon cdkDragHandle class="handler">drag_indicator</mat-icon>
 			<div mat-line>
 				{{ i.name }}
 			</div>
-			<div>
+			<div class="details">
 				{{ i.details }}
 			</div>
 		</mat-list-item>
 	</section>
 	<div cdkDropList (cdkDropListDropped)="onDrop($event)" *ngIf="draggable">
-		<mat-list-item *ngFor="let i of data"  cdkDrag>
+		<mat-list-item *ngFor="let i of data" cdkDrag>
 			<mat-icon matListIcon cdkDragHandle class="handler">drag_indicator</mat-icon>
 			<div mat-line>
 				{{ i.name }}
 			</div>
-			<div>
+			<div class="details">
 				{{ i.details }}
 			</div>
 		</mat-list-item>
