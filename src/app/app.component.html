@@ -8,7 +8,6 @@
 <mat-nav-list  *ngIf="data.length > 0" [disableRipple]="draggable" >
 	<section  *ngIf="!draggable">
 		<mat-list-item *ngFor="let i of data">
-			<mat-icon style="display: none;" matListIcon cdkDragHandle class="handler">drag_indicator</mat-icon>
 			<div mat-line>
 				{{ i.name }}
 			</div>
