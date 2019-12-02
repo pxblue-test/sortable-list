@@ -14,7 +14,7 @@
   <ion-content>
     <mat-nav-list *ngIf="data.length > 0" [disableRipple]="draggable">
       <section *ngIf="!draggable">
-        <mat-list-item *ngFor="let i of data" style="height: 48px">
+        <mat-list-item *ngFor="let i of data">
           <div mat-line class="mat-h3">
             {{ i.name }}
           </div>
@@ -24,7 +24,7 @@
         </mat-list-item>
       </section>
       <div cdkDropList class="sortable-list" (cdkDropListDropped)="onDrop($event)" *ngIf="draggable">
-        <mat-list-item *ngFor="let i of data" cdkDrag cdkDragHandle class="sortable-box" style=" height: 48px;">
+        <mat-list-item *ngFor="let i of data" cdkDrag cdkDragHandle class="sortable-box">
           <mat-icon matListIcon cdkDragHandle class="handler">drag_handle</mat-icon>
           <div class="mat-h3" mat-line>
             {{ i.name }}
