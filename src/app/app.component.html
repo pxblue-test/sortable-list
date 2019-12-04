@@ -23,18 +23,17 @@
           </div>
         </mat-list-item>
       </section>
-      <div cdkDropList class="sortable-list" (cdkDropListDropped)="onDrop($event)" *ngIf="draggable">
-        <mat-list-item *ngFor="let i of data" cdkDrag cdkDragHandle class="sortable-box">
-          <mat-icon matListIcon cdkDragHandle class="handler">drag_handle</mat-icon>
-          <div class="mat-h3" mat-line>
-            {{ i.name }}
-          </div>
-          <div class="mat-p details">
-            {{ i.details }}
-          </div>
-        </mat-list-item>
-
-      </div>
+        <div cdkDropList (cdkDropListDropped)="onDrop($event)" *ngIf="draggable">
+            <mat-list-item *ngFor="let i of data" cdkDrag>
+                <mat-icon matListIcon cdkDragHandle class="handler">drag_handle</mat-icon>
+                <div mat-line>
+                    {{ i.name }}
+                </div>
+                <div class="details">
+                    {{ i.details }}
+                </div>
+            </mat-list-item>
+        </div>
     </mat-nav-list>
   </ion-content>
 </ion-app>

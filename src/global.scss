@@ -27,7 +27,7 @@
 
 @import '~@pxblue/colors/palette.scss';
 
-html, body { 
+html, body {
   margin: 0;
   height: 100%;
   width: 100%;
@@ -36,16 +36,7 @@ html, body {
 ion-header, ion-toolbar {
     color: map-get($pxb-white, 50);
     --color : map-get($pxb-white, 50);
-    --background: map-get($pxb-blue, 500); 
+    --background: map-get($pxb-blue, 500);
     background: map-get($pxb-blue, 500);
-    font-family: Open Sans, sans-serif;    
-}
-
-ion-button{
-  color: map-get($pxb-white, 50);
-  --color : map-get($pxb-white, 50);
-  --background : map-get($pxb-blue, 500);
-  --background-activated :  map-get($pxb-blue, 500);
-  --background-focused : map-get($pxb-blue, 500);
-  --background-hover : map-get($pxb-blue, 500);
+    font-family: Open Sans, sans-serif;
 }
